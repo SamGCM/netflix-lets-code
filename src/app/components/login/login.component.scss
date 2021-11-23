@@ -1,0 +1,45 @@
+main {
+  background-image: url(../../../assets/images/netflix_background.svg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  width:440px;
+  height:600px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 5rem 3.5rem;
+  color: #fff;
+}
+
+h2 {
+  margin-bottom: 25px
+}
+
+input {
+  width: 315px;
+  margin-bottom: 15px;
+  background-color: #333333;
+  border: none;
+}
+
+button {
+  width: 315px;
+  background-color: #E50914;
+  color: #fff
+}
+
+p {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #8C8C8C;
+}
+
+p a {
+  color: #0080FF;
+  text-decoration: underline;
+}
