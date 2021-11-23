@@ -1,27 +1,48 @@
-# NetflixLetsCode
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+# Netflix - Squad 6
 
-## Development server
+Projeto final do módulo de Angular da Lets Code.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Participantes
 
-## Code scaffolding
+- [Gabriela Di Poggio](https://github.com/gabrieladipoggio) 
+- [Igor França](https://github.com/ig0rfranca)
+- [Cristian Soares](https://github.com/criric)
+- [Breno Cavalcante ](https://github.com/BrennoMC)
+- [Samuel Gama ](https://github.com/SamGCM)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 💻📱 Preview
+<a href="netflix-squad6.netlify.app">Acesse</a>
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🔨 Ferramentas Utilizadas
+- [Angular](https://angular.io/)
+- [Bootstrap-angular](https://ng-bootstrap.github.io/#/home)
 
-## Running unit tests
+## 💡 Funcionalidades
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Rotas
+- Responsividade
+- Rota protegida
+- Consumo de API
 
-## Running end-to-end tests
+## ⚙️ Executando o projeto 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Execute os comandos no seu terminal:
 
-## Further help
+```bash
+# Clone o repositório
+$ git clone https://github.com/SamGCM/netflix-lets-code.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Entre no diretório
+$ cd netflix-lets-code
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação
+$ ng serve
+```
+
+Acesse em seu navegador http://localhost:4200/
+

@@ -1,4 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600;800&family=Open+Sans:wght@400;700&display=swap');
+
+// Variables
+$red: #E50914;
+$red-hover: #FD000D;
+$black: #000000;
+$gray-01: rgba(255, 255, 255, 0.19);
+$gray-02: rgba(255, 255, 255, 0.57);
+$orange: #F28300;
+$white: #FFFFFF;
+
+/* You can add global styles to this file, and also import other style files */
+html{
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $white;
+    font-size: 2rem;
+    font-family: 'Martel Sans 400', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Martel Sans 800', sans-serif;
+}
+
+h3, h4, h5 {
+    font-family: 'Martel Sans 600', sans-serif;
+}
+
+body {
+    background-color: $black
+}
