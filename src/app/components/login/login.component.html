@@ -1,11 +1,24 @@
 <main>
   <div class="login-box">
     <h2>Entrar</h2>
-    <form>
-      <input type="email" class="form-control" placeholder="Email ou número de telefone" name="email">
-      <input type="password" class="form-control" placeholder="Senha" name="password">
+    <form (submit)="login()">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email ou número de telefone"
+        name="email"
+        (ngModel)="email"
+      />
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Senha"
+        name="password"
+        (ngModel)="password"
+        />
       <button type="submit" class="btn">Entrar</button>
-      <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a>Saiba mais.</a></p>
+      <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a (click)="showInfo = true">Saiba mais.</a></p>
+      <p *ngIf="showInfo">As informações recolhidas pelo Google reCAPTCHA estão sujeitas à Política de Privacidade e Termos de Uso, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).</p>
     </form>
   </div>
 </main>

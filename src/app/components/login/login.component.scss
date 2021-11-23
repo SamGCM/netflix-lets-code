@@ -30,7 +30,12 @@ input {
 button {
   width: 315px;
   background-color: #E50914;
-  color: #fff
+  color: #fff;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #FD000D;
 }
 
 p {
@@ -39,7 +44,11 @@ p {
   color: #8C8C8C;
 }
 
-p a {
+p a, p a:hover {
   color: #0080FF;
   text-decoration: underline;
+}
+
+a:hover {
+  cursor: pointer;
 }
