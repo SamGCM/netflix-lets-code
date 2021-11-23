@@ -1,0 +1,69 @@
+body {
+    color: black;
+}
+
+.main {
+    height: 809px;
+    background-image: url('/src/assets/images/netflix_background.svg') center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 64px;
+    max-width: 510px;
+    text-align: center;
+}
+
+.main-child {
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+}
+
+.main span {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.main p {
+    font-size: 19px;
+    margin-bottom: 60px;
+}
+
+.header {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    top: 28px;
+    left: 56px;
+}
+
+.login {
+    display: inline-block;
+    background-color: #e00914;
+    color: #fff;
+    align-self: center;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.gradient {
+    background: rgba(0,0,0,0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    position: absolute;
+    margin: 0, 0, 0, 0;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 949px) and (orientation: portrait), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (max-width: 349px){}
