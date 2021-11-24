@@ -1,0 +1,31 @@
+<main>
+  <div class="login-box">
+    <div class="login-info">
+      <h2>Entrar</h2>
+      <form (submit)="login()"  [formGroup]="signupForm">
+        <input
+          type="email"
+          class="form-control"
+          [ngClass]="{'error-input': signupForm.get('email').invalid && signupForm.get('email').touched }"
+          placeholder="Email ou número de telefone"
+          name="email"
+          formControlName="email"
+          id="email"
+        />
+        <span class="error-text" *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">Informe um e-mail ou número de telefone válido.</span>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Senha"
+          name="password"
+          formControlName="password"
+          id="password"
+          />
+          <span class="error-text" *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched">A senha deve ter entre 4 e 60 caracteres. </span>
+        <button type="submit" class="btn" [disabled]="signupForm.invalid">Entrar</button>
+        <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a (click)="showInfo = true">Saiba mais.</a></p>
+        <p *ngIf="showInfo">As informações recolhidas pelo Google reCAPTCHA estão sujeitas à Política de Privacidade e Termos de Uso, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).</p>
+      </form>
+    </div>
+  </div>
+</main>
