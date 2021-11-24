@@ -11,12 +11,12 @@ import { HomeComponent } from './views/home/home.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
