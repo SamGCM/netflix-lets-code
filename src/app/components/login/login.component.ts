@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user/user.model';
 import { LoginService } from 'src/app/services/login.service';
 
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   signupForm!:FormGroup;
 
-  constructor(private loginService: LoginService, private fb:FormBuilder) { }
+  constructor(private loginService: LoginService, private fb:FormBuilder, private router:Router) { }
 
   ngOnInit(): void {
     this.signupForm = this.fb.group({
@@ -25,7 +26,9 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.loginService.login(this.user)
+    this.loginService.login(this.user);
+    this.router.navigate(['/']);
+
   }
 
 }
