@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user/user.model';
 import { LoginService } from 'src/app/services/login.service';
 
@@ -12,19 +12,18 @@ export class LoginComponent implements OnInit {
   showInfo = false;
 
   user:User = new User();
-  email:string =  this.user.email ;
-  password:string = this.user.password ;
 
-  signupForm: FormGroup;
+  signupForm!:FormGroup;
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private fb:FormBuilder) { }
 
   ngOnInit(): void {
-      this.signupForm = new FormGroup({
-        'email': new FormControl(null),
-        'password': new FormControl(null)
-  })
-}
+    this.signupForm = this.fb.group({
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required]
+    })
+  }
+
   login(){
     this.loginService.login(this.user)
   }
