@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.loginService.login(this.user);
-    this.router.navigate(['/']);
+    this.router.navigate(['/browse']);
 
   }
 

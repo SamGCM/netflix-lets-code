@@ -1,0 +1,25 @@
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6rem
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.users {
+  display: flex;
+  gap: 50px;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
