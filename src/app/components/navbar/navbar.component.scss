@@ -1,5 +1,3 @@
-@import "../../../styles.scss";
-
 header {
     padding: 2rem 8rem;
     background: transparent;
@@ -21,7 +19,7 @@ header {
         ul {
             li {
                 a {
-                    color: $white;
+                    color: #fff;
                     margin: 0 1.1rem;
                 }
             }
