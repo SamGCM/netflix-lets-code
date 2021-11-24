@@ -6,13 +6,13 @@
 
 // Variables
 :root {
-  --red: #E50914;
-  --red-hover: #FD000D;
-  --black: #000000;
-  --gray-01: rgba(255, 255, 255, 0.19);
-  --gray-02: rgba(255, 255, 255, 0.57);
-  --orange: #F28300;
-  --white: #FFFFFF;
+    --red: #E50914;
+    --red-hover: #FD000D;
+    --black: #000000;
+    --gray-01: rgba(255, 255, 255, 0.19);
+    --gray-02: rgba(255, 255, 255, 0.57);
+    --orange: #F28300;
+    --white: #FFFFFF;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -39,3 +39,4 @@ h3, h4, h5 {
 body {
     background-color: var(--black)
 }
+
