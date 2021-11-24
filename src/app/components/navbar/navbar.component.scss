@@ -1,5 +1,4 @@
 header {
-    padding: 2rem 8rem;
     background: transparent;
     nav {
         position: fixed;
@@ -8,7 +7,7 @@ header {
 
         .navbar-brand {
             margin-right: 5rem;
-            padding-left: 8rem 
+            padding-left: 5rem 
         }
 
         .navbar-toggler {
@@ -35,14 +34,14 @@ header {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
     header {
         nav {
             .navbar-brand {
                 padding-left: 1rem;
                 
                 #logo {
-                    width: min(170px, 35vw);
+                    width: min(13rem, 35vw);
                 }
             }
         }

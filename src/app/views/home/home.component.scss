@@ -3,18 +3,20 @@ body {
 }
 
 .main {
-    height: 809px;
-    background-image: url('/src/assets/images/netflix_background.svg') center;
+    height: 100vh;
+    background-image: url('../../../assets/images/netflix_background.svg');
+    background-repeat:no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     text-align: center;
+    padding: 3rem;
 }
 
 .main h1 {
-    font-size: 64px;
-    max-width: 510px;
+    font-size: 6.4rem;
+    max-width: 71rem;
     text-align: center;
 }
 
@@ -25,13 +27,13 @@ body {
 }
 
 .main span {
-    font-size: 26px;
-    margin-bottom: 40px;
+    font-size: 2.6rem;
+    margin-bottom: 4rem;
 }
 
 .main p {
-    font-size: 19px;
-    margin-bottom: 60px;
+    font-size: 2.2rem;
+    margin-bottom: 6rem;
 }
 
 .header {
@@ -40,19 +42,25 @@ body {
     width: 100%;
     display: flex;
     justify-content: start;
-    top: 28px;
-    left: 56px;
+    top: 2.8rem;
+    left: 5.6rem;
 }
 
 .login {
     display: inline-block;
-    background-color: #e00914;
-    color: #fff;
+    background-color: var(--red);
+    color: var(--white);
     align-self: center;
-    padding: 8px 18px;
+    padding: 1.3rem 5rem;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: .4rem;
+
+    &:hover {
+        background-color: var(--red-hover);
+    }
 }
+
+
 
 .gradient {
     background: rgba(0,0,0,0.4);
@@ -66,4 +74,36 @@ body {
     margin: 0, 0, 0, 0;
 }
 
-@media only screen and (min-width: 550px) and (max-width: 949px) and (orientation: portrait), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (max-width: 349px){}
+@media (min-width: 484px) and (max-width: 684px) { // Em uma tela de até 1000px de largura, aplique isso...  :D
+    .main {
+        h1 {
+            font-size: 5rem;
+        }
+        span {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media (max-width: 483px) {
+    .main {
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        span {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .login {
+            padding: .5rem 3rem;
+        }
+    }
+}
