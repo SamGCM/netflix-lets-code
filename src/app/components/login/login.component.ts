@@ -18,11 +18,14 @@ export class LoginComponent implements OnInit {
 
   customValidator(control: AbstractControl){
     let email = Validators.email(control)
-    let number = Validators.pattern("[0-9]{11}")(control)
-    if(email == null || number == null) {
+    let number = Validators.pattern("[0-9]{10,11}")(control)
+    let duplicates = Validators.pattern(/(.)\1{9,10}/)(control)
+    duplicates = duplicates == null ? {duplicates:true} : null
+
+    if(email == null || (number == null && duplicates == null)) {
       return null
     } else {
-      return {...email, ...number}
+      return {...email, ...number, ...duplicates}
     }
   }
 
