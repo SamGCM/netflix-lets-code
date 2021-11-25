@@ -3,21 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { NavegationScreenModule } from './views/navegation-screen/navegation-screen.module';
-import { HeaderComponent } from './components/basics/header/header.component';
-import { PageNavegationScreenComponent } from './components/navegation-screen/page-navegation-screen/page-navegation-screen.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavegationScreenModule } from './navegation-screen/navegation-screen.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+    // NgbModule,
     NavegationScreenModule
   ],
   providers: [],
