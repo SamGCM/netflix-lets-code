@@ -28,3 +28,7 @@ h2 {
 .user img {
   width: 150px;
 }
+
+.user img:hover {
+  outline: 6px solid var(--white);
+}

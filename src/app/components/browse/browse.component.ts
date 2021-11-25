@@ -12,10 +12,8 @@ export class BrowseComponent implements OnInit {
   constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
-    this.loginService.getUserInfo().subscribe(response => {
-      console.log(response.users)
-      this.users = response.users
-    })
+    this.users = this.loginService.getUsers();
+    console.log(this.users)
   }
 
 

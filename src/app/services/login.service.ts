@@ -7,18 +7,17 @@ import { User } from '../models/user/user.model';
   providedIn: 'root'
 })
 export class LoginService {
-  userInfo:Observable<any>;
-
   constructor(private http:HttpClient) { }
 
   login(user:User) {
-    return this.http.post('https://private-3923c4-santandercoders809.apiary-mock.com/login', user).pipe((response) => {
-      this.userInfo = response;
-      return response
-    });
+    return this.http.post('https://private-3923c4-santandercoders809.apiary-mock.com/login', user);
   }
 
-  getUserInfo(){
-    return this.userInfo
+  setUser(response){
+    localStorage.setItem("letsflix", JSON.stringify(response.users));
+  }
+
+  getUsers(){
+   return JSON.parse(localStorage.getItem("letsflix"))
   }
 }

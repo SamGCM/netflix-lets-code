@@ -24,10 +24,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.loginService.login(this.user).subscribe((response) => {
-      console.log(response)
+    this.loginService.login(this.user).subscribe(response => {
+      this.loginService.setUser(response);
       this.router.navigate(['/browse']);
-    });
+    })
   }
 
 }
