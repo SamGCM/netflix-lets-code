@@ -12,6 +12,7 @@
           formControlName="email"
           id="email"
           [(ngModel)]="user.email"
+          mask='(00) 00000-0000'
         />
         <span class="error-text" *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">Informe um e-mail ou número de telefone válido.</span>
         <input
