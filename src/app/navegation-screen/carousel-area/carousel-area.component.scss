@@ -6,9 +6,11 @@
             margin-bottom: 3.3rem;
         }
         .area-card-film {
+            width: 100%;
             display: flex;
             flex-wrap: nowrap;
-            gap: 2rem;
+            overflow: hidden;
+            gap: 2.5rem;
         }
     }
 }

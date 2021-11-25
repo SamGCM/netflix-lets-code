@@ -1,6 +1,6 @@
 header {
     padding-top: 3rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     left: 0;
@@ -24,5 +24,8 @@ header {
                 }
             }
         }
+    }
+    &.header-scroll {
+        background-color: #000;
     }
 }

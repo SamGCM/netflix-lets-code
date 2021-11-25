@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carousel-area',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel-area.component.scss']
 })
 export class CarouselAreaComponent implements OnInit {
+
+  @Input() title!: string;
 
   constructor() { }
 
