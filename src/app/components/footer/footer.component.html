@@ -1,0 +1,15 @@
+<footer [ngClass]='isHidden'>
+    <h3>Dúvidas? Ligue 0800-761</h3>
+    <div class="container-links">
+        <div *ngFor="let item of links" >
+            <ul>    
+                <li class="list-item" *ngFor="let subItem of item">
+                    <a class='item-link' href="/{{ subItem }}">
+                        {{ subItem }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <span>Netflix Brasil</span>
+</footer>
