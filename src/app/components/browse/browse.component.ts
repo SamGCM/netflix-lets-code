@@ -13,7 +13,6 @@ export class BrowseComponent implements OnInit {
 
   ngOnInit(): void {
     this.users = this.loginService.getUsers();
-    console.log(this.users)
   }
 
 

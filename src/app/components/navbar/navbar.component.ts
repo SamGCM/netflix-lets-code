@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
   }
   
   verifyRoute() {
-    this.url === 'navegation-screen'
+    this.url === '/navegation-screen'
       ? this.navComplete = true
       : this.navComplete = false 
   }
