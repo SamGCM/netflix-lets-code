@@ -1,6 +1,7 @@
 header {
     background: transparent;
     nav {
+        background: linear-gradient(rgba(0, 0, 0, 0.466), #1414149f, #14141400);
         position: fixed;
         left: 0;
         width: 100%;
@@ -44,6 +45,11 @@ header {
 }
 
 @media (max-width: 990px) {
+    header {
+        nav{
+            background: linear-gradient(rgba(0, 0, 0, 0.658) 10%, #1414149f 50% 30%, #1414142d 100%);
+        }
+    }
     .navbar-toggler {
         position: relative;
         display: flex;
@@ -56,12 +62,10 @@ header {
             height: 3px;
             width: 4rem;
             border: none;
-            padding: none;
-            
         }
     }
 
     .navbar-nav {
-
+        
     }
 }
