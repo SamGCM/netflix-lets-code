@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './views/home/home.component';
+import { BrowseComponent } from './components/browse/browse.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './views/home/home.component';
     HeaderComponent,
     LoginComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    BrowseComponent
   ],
   imports: [
     BrowserModule,
