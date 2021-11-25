@@ -1,0 +1,49 @@
+header {
+    background: transparent;
+    nav {
+        position: fixed;
+        left: 0;
+        width: 100%;
+
+        .navbar-brand {
+            margin-right: 5rem;
+            padding-left: 5rem 
+        }
+
+        .navbar-toggler {
+            font-size: 3rem;
+            position: relative;
+        }
+
+        ul {
+            li {
+                a {
+                    color: #fff;
+                    margin: 0 1.1rem;
+                }
+            }
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        nav {
+            .navbar-brand {
+                padding-left: 1rem;
+                
+                #logo {
+                    width: min(13rem, 35vw);
+                }
+            }
+        }
+    }
+}

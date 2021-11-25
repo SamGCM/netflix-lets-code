@@ -5,13 +5,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600;800&family=Open+Sans:wght@400;700&display=swap');
 
 // Variables
-$red: #E50914;
-$red-hover: #FD000D;
-$black: #000000;
-$gray-01: rgba(255, 255, 255, 0.19);
-$gray-02: rgba(255, 255, 255, 0.57);
-$orange: #F28300;
-$white: #FFFFFF;
+:root {
+    --red: #E50914;
+    --red-hover: #FD000D;
+    --black: #000000;
+    --gray-01: rgba(255, 255, 255, 0.19);
+    --gray-02: rgba(255, 255, 255, 0.57);
+    --orange: #F28300;
+    --white: #FFFFFF;
+}
 
 /* You can add global styles to this file, and also import other style files */
 html{
@@ -20,8 +22,8 @@ html{
 
 * {
     box-sizing: border-box;
-    text-decoration: none !important;
-    color: $white;
+    text-decoration: none;
+    color: var(--white);
     font-size: 2rem;
     font-family: 'Martel Sans 400', sans-serif;
     list-style: none;
@@ -36,7 +38,7 @@ h3, h4, h5 {
 }
 
 body {
-    background-color: $black
+    background-color: var(--black)
 }
 
 img{
@@ -47,3 +49,4 @@ button{
     background-color: transparent;
     cursor: pointer;
 }
+
