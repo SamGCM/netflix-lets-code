@@ -7,12 +7,18 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./browse.component.scss']
 })
 export class BrowseComponent implements OnInit {
+  users = [];
 
   constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
+    this.loginService.getUserInfo().subscribe(response => {
+      console.log(response.users)
+      this.users = response.users
+    })
   }
 
-  
+
+
 
 }

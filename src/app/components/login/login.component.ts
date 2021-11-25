@@ -11,10 +11,8 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
   showInfo = false;
-
-  user:User = new User();
-
   signupForm!:FormGroup;
+  user:User = new User();
 
   constructor(private loginService: LoginService, private fb:FormBuilder, private router:Router) { }
 
@@ -26,9 +24,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.loginService.login(this.user);
-    this.router.navigate(['/browse']);
-
+    this.loginService.login(this.user).subscribe((response) => {
+      console.log(response)
+      this.router.navigate(['/browse']);
+    });
   }
 
 }

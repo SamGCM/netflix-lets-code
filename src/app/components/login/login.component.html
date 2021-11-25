@@ -11,6 +11,7 @@
           name="email"
           formControlName="email"
           id="email"
+          [(ngModel)]="user.email"
         />
         <span class="error-text" *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">Informe um e-mail ou número de telefone válido.</span>
         <input
@@ -20,6 +21,7 @@
           name="password"
           formControlName="password"
           id="password"
+          [(ngModel)]="user.password"
           />
           <span class="error-text" *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched">A senha deve ter entre 4 e 60 caracteres. </span>
         <button type="submit" class="btn" [disabled]="signupForm.invalid">Entrar</button>

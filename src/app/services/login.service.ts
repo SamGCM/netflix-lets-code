@@ -1,21 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from '../models/user/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+  userInfo:Observable<any>;
 
   constructor(private http:HttpClient) { }
 
   login(user:User) {
-    return this.http.post('https://private-3923c4-santandercoders809.apiary-mock.com/login', user, {responseType: 'text'}).subscribe((response) => {
-      console.log(response);
-      // the response is broken, insert missing comma
-      // let comma_location = response.search("user") - 2
-      // response = response.slice(0, comma_location) + "," + response.slice(comma_location)
+    return this.http.post('https://private-3923c4-santandercoders809.apiary-mock.com/login', user).pipe((response) => {
+      this.userInfo = response;
       return response
     });
+  }
+
+  getUserInfo(){
+    return this.userInfo
   }
 }

@@ -1,14 +1,9 @@
 <main>
 <h2>Quem está assistindo?</h2>
 <div class="users">
-  <div class="user">
-    <img src="../../../assets/images/profile1.svg">
-    <p>Usuário 1</p>
-  </div>
-
-  <div class="user">
-    <img src="../../../assets/images/profile1.svg">
-    <p>Usuário 1</p>
+  <div class="user" *ngFor="let user of users">
+    <img src="{{user.avatarUrl}}">
+    <p>{{user.name}}</p>
   </div>
 </div>
 </main>
