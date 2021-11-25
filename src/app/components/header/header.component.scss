@@ -1,0 +1,31 @@
+header {
+    padding-top: 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    .container {
+        display: flex;
+        
+        nav {
+            display: flex;
+            align-items: center;
+            margin-left: 6.1rem;
+            ul {
+                display: flex;
+                gap: 3.1rem;
+                padding: 0;
+                margin: 0;
+                li {
+                    a {
+                        font-size: 2.4rem;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &.header-scroll {
+        background-color: #000;
+    }
+}

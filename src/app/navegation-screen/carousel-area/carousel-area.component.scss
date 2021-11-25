@@ -1,0 +1,16 @@
+.s-area-carousel {
+    margin-bottom: 7rem;
+    .container {
+        h4 {
+            font-size: 2.4rem;
+            margin-bottom: 3.3rem;
+        }
+        .area-card-film {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            gap: 2.5rem;
+        }
+    }
+}

@@ -25,6 +25,7 @@ html{
     text-decoration: none;
     color: var(--white);
     font-size: 2rem;
+    list-style: none;
     font-family: 'Martel Sans', sans-serif;
     font-weight: 400;
 }
@@ -42,6 +43,14 @@ h3, h4, h5 {
 body {
     background-color: var(--black)
 }
+
+img{
+    max-width: 100%;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
 
 ul {
     list-style: none;
