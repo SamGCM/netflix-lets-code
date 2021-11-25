@@ -49,13 +49,16 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
     this.url = this.location.path()
-    this.getLinksForRoute()
+    this.getLinksForFooter()
+    console.log(this.isHidden)
   }
   
-  getLinksForRoute(){
+  getLinksForFooter(){
     if(this.LinksForPaths[this.url] !== undefined){
     const listLinks = this.LinksForPaths[this.url]
     this.links = listLinks
-    } else {this.isHidden = 'hidden'}
+    } else {
+      this.isHidden = 'isHidden'
+    }
   }
 }

@@ -2,7 +2,13 @@
 <h2>Quem está assistindo?</h2>
 <div class="users">
   <div class="user" *ngFor="let user of users">
-    <img src="{{user.avatarUrl}}">
+    <div [ngSwitch]="user.id">
+      
+      <a routerLink="/navegation-screen" *ngSwitchCase="1">
+        <img src="{{user.avatarUrl}}">
+      </a>
+      <img *ngSwitchDefault src="{{user.avatarUrl}}">
+    </div>
     <p>{{user.name}}</p>
   </div>
 </div>
