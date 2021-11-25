@@ -11,7 +11,7 @@ import { NavegationScreenModule } from './navegation-screen/navegation-screen.mo
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
