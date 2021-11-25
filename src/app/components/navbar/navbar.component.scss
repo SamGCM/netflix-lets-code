@@ -4,15 +4,10 @@ header {
         position: fixed;
         left: 0;
         width: 100%;
-
+        z-index: 2;
         .navbar-brand {
             margin-right: 5rem;
             padding-left: 5rem 
-        }
-
-        .navbar-toggler {
-            font-size: 3rem;
-            position: relative;
         }
 
         ul {
@@ -45,5 +40,28 @@ header {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 990px) {
+    .navbar-toggler {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 35px;
+        .toggler {
+            background: var(--white);
+            height: 3px;
+            width: 4rem;
+            border: none;
+            padding: none;
+            
+        }
+    }
+
+    .navbar-nav {
+
     }
 }
