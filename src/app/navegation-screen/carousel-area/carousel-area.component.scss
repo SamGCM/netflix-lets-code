@@ -10,9 +10,26 @@
             width: 130%;
             display: flex;
             flex-wrap: nowrap;
-            overflow: auto;
+            
             gap: 2.5rem;
-
+            overflow-x: auto;
+            background-color: transparent;
+            &::-webkit-scrollbar {
+                width: 0.3rem;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 0.4rem;
+                background-color: transparent;
+            }
+            &:hover {
+                &::-webkit-scrollbar {
+                    width: 0.3rem;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 0.4rem;
+                    background-color: rgba(127, 127, 127, 0.597);
+                }
+            }
             .container-card {
                 width: 100%;
 
