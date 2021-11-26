@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { Location } from "@angular/common";
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -12,19 +12,23 @@ export class NavbarComponent implements OnInit {
   navComplete: boolean = false
   isHidden: string = "hidden"
 
-  constructor(private location: Location, private el: ElementRef) {}
+  constructor(private route: Router, private el: ElementRef) {}
 
   tabs = ["Início", "Séries", "Filmes", "Bombando", "Minha lista"];
   
   ngOnInit(): void {
-    this.url = this.location.path()
     this.verifyRoute()
   }
   
-  verifyRoute() {
-    this.url === '/navegation-screen'
-      ? this.navComplete = true
-      : this.navComplete = false 
+  verifyRoute(){
+    this.route.events.subscribe((event) => {
+      if(event instanceof NavigationEnd){
+        this.url = event.url
+        this.url === '/navegation-screen'
+          ? this.navComplete = true
+          : this.navComplete = false 
+      }{null}
+    })
   }
   
   showOrHidden(){
