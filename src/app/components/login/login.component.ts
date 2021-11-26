@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.verifyLogin()
     this.signupForm = this.fb.group({
         email: ['', [Validators.required, this.customValidator]],
         password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(60)]]
@@ -41,6 +42,12 @@ export class LoginComponent implements OnInit {
       this.loginService.setUser(response);
       this.router.navigate(['/browse']);
     })
+  }
+
+  verifyLogin() {
+    this.loginService.getUsers() 
+      ? this.router.navigate(['/browse'])
+      : null
   }
 
 }
