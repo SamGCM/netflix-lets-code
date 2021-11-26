@@ -41,7 +41,8 @@ h3, h4, h5 {
 }
 
 body {
-    background-color: var(--black)
+    background-color: var(--black);
+    overflow: overlay;
 }
 
 img{
@@ -57,4 +58,14 @@ ul {
     list-style: none;
     padding: 0;
 }
+
+::-webkit-scrollbar {
+    width: 1rem;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background-color: rgba(127, 127, 127, 0.597);
+}
+
 
