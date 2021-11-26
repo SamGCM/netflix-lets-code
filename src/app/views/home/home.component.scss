@@ -12,6 +12,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 3rem;
+    flex-direction: column;
 }
 
 .main h1 {
@@ -60,8 +61,6 @@ body {
     }
 }
 
-
-
 .gradient {
     background: rgba(0,0,0,0.4);
     background-image: linear-gradient(
@@ -74,6 +73,45 @@ body {
     margin: 0, 0, 0, 0;
 }
 
+hr {
+    background-color: var(--gray-02);
+    margin-bottom: 4rem;
+}
+
+
+.content {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section h1 {
+    text-align: center;
+    color: var(--white);
+    font-size: 3.125rem;
+}
+
+.section p {
+    text-align: center;
+    color: var(--white);
+    font-size: 1.625rem;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 5rem;
+    justify-content: center;
+}
+
+
 @media (min-width: 484px) and (max-width: 684px) { // Em uma tela de até 1000px de largura, aplique isso...  :D
     .main {
         h1 {
@@ -85,6 +123,34 @@ body {
         p {
             font-size: 1.8rem;
         }
+    }
+}
+
+@media (max-width: 1000px) {
+    .right {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        img {
+            width: 100%;
+        }
+    }
+
+    .left {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 740px) {
+    h1 {
+        font-size: 2.375rem;
+    }
+    
+    p {
+        font-size: 1.687rem;
     }
 }
 
