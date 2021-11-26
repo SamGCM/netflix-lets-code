@@ -1,14 +1,34 @@
 
-<body>
-    <main class="main">
-        <div class="main-child">
-            
-            <h1>Filmes, séries e muito mais. Sem limites.</h1>
-            <span>Assista onde quiser. Cancele quando quiser.</span>
-            <p>Pronto para assitir? Clique no botão abaixo para ser redirecionado para a tela de login.</p>
+<main class="main">
+    <div class="main-child">
+        
+        <h1>Filmes, séries e muito mais. Sem limites.</h1>
+        <span>Assista onde quiser. Cancele quando quiser.</span>
+        <p>Pronto para assitir? Clique no botão abaixo para ser redirecionado para a tela de login.</p>
 
-            <a href="/login" class="login">Entrar</a>
+        <a href="/login" class="login">Entrar</a>
+        
+    </div>
+    <div class="gradient"></div>
+    <hr>
+</main>    
+
+<section class="section">
+    
+    <div  *ngFor="let item of items; let i = index" class="content">
+        
+        <div [ngClass]="items[i].direction"> 
+            <div class="container-text">
+                <h1>{{items[i].title}}</h1>
+                <p>{{items[i].description}}</p>
+            </div>
+            <img [src]="items[i].image">
         </div>
-        <div class="gradient"></div>
-    </main>    
-</body>
+        <hr>
+    </div>
+</section>
+
+
+
+
+
