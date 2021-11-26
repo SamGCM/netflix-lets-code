@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-navbar',
@@ -12,17 +12,17 @@ export class NavbarComponent implements OnInit {
   navComplete: boolean = false
   isHidden: string = "hidden"
 
-  constructor(private route: ActivatedRoute, private el: ElementRef) {}
+  constructor(private location: Location, private el: ElementRef) {}
 
   tabs = ["Início", "Séries", "Filmes", "Bombando", "Minha lista"];
   
   ngOnInit(): void {
-    this.url = this.route.snapshot.routeConfig?.path!
+    this.url = this.location.path()
     this.verifyRoute()
   }
   
   verifyRoute() {
-    this.url === 'rota' //Adicionada rota correta para aparecer a navabar completa
+    this.url === '/navegation-screen'
       ? this.navComplete = true
       : this.navComplete = false 
   }

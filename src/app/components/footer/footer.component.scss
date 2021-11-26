@@ -1,0 +1,102 @@
+footer {
+    padding: 8rem 5rem 1rem 5rem;
+    h3 {
+        font-size: 2.5rem;
+        color: var(--gray-02);
+    }
+    span {
+        color: var(--gray-02);
+        font-size: 1.9rem;
+    }
+    .container-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        div {
+            width: 30rem;
+            ul {
+                margin: 4rem 7rem 4rem 0;
+                .list-item {
+                    margin-bottom: 1.8rem;
+                    .item-link {
+                        font-size: 1.5rem;
+                        color: var(--gray-02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.isHidden {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        .container-links {
+            div {
+                ul {
+                    margin: 5rem 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 521px) and (max-width: 675px) {
+    footer {
+        padding: 3rem 2rem;
+        h3 {
+            font-size: 2rem;
+            color: var(--gray-02);
+        }
+        span {
+            color: var(--gray-02);
+            font-size: 1.6rem;
+        }
+        .container-links {
+            div {
+                width: 23rem;
+                ul {
+                    margin: 3rem 0 3rem 0;
+                    .list-item {
+                    margin-bottom: 1.5rem;
+                        .item-link {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    footer {
+        padding: 3rem 2rem;
+        h3 {
+            font-size: 2rem;
+            color: var(--gray-02);
+        }
+        span {
+            color: var(--gray-02);
+            font-size: 1.6rem;
+        }
+        .container-links {
+            div {
+                width: 17rem;
+                ul {
+                    margin: 2rem 0 2rem 0;
+                    .list-item {
+                    margin-bottom: 1.5rem;
+                        .item-link {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

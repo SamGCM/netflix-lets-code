@@ -1,0 +1,40 @@
+.btn {
+    position: relative;
+    font-size: 2.4rem;
+    height: 6rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    padding-left: 5rem;
+    padding-right: 3rem;
+    transition: .3s;
+    &::before {
+        position: absolute;
+    }
+}
+
+.primary {
+    color: #000;
+    background-color: #fff;
+    margin-right: 3.6rem;
+    &::before {
+        content: url('../../../assets/images/play-icon.svg');
+        left: 2rem;
+    }
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.57);
+    }
+}
+
+.secondary {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.46);
+    padding-left: 7.2rem;
+    &::before {
+        content: url('../../../assets/images/info-icon.svg');
+        top: 1.3rem;
+        left: 3rem;
+    }
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.19);
+    }
+}

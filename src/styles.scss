@@ -25,18 +25,36 @@ html{
     text-decoration: none;
     color: var(--white);
     font-size: 2rem;
-    font-family: 'Martel Sans 400', sans-serif;
+    list-style: none;
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 400;
 }
 
 h1, h2 {
-    font-family: 'Martel Sans 800', sans-serif;
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 800;
 }
 
 h3, h4, h5 {
-    font-family: 'Martel Sans 600', sans-serif;
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 600;
 }
 
 body {
     background-color: var(--black)
+}
+
+img{
+    max-width: 100%;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
