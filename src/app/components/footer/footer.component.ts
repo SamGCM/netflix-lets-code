@@ -62,7 +62,6 @@ export class FooterComponent implements OnInit {
   }
   
   getLinksForFooter(){
-    console.log(this.url)
     if(this.LinksForPaths[this.url] !== undefined){
     const listLinks = this.LinksForPaths[this.url]
     this.links = listLinks
