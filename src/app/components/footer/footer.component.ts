@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from "@angular/common";
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +12,7 @@ export class FooterComponent implements OnInit {
   links: Array<string[]> = []
   isHidden:string = ''
   LinksForPaths: Object = {
-    '' : [
+    '/' : [
       [
         "Perguntas frequentes", "Relação com investidores", 
         "Formas de assistir", "Informações corporativas", "Só na Netflix"
@@ -45,15 +46,23 @@ export class FooterComponent implements OnInit {
     ]
   } 
 
-  constructor(private location: Location) { }
+  constructor(private location: Location, private router: Router) { }
 
   ngOnInit(): void {
-    this.url = this.location.path()
-    this.getLinksForFooter()
-    console.log(this.isHidden)
+    this.verifyRoute()
+  }
+
+  verifyRoute(){
+    this.router.events.subscribe((event) => {
+      if(event instanceof NavigationEnd){
+        this.url = event.url
+        this.getLinksForFooter()
+      }{null}
+    })
   }
   
   getLinksForFooter(){
+    console.log(this.url)
     if(this.LinksForPaths[this.url] !== undefined){
     const listLinks = this.LinksForPaths[this.url]
     this.links = listLinks
