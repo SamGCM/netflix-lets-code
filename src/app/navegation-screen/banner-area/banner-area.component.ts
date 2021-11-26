@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-area.component.scss']
 })
 export class BannerAreaComponent implements OnInit {
+  modalOpen = false;
 
   constructor() { }
 

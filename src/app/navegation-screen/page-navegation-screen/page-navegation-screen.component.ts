@@ -18,12 +18,13 @@ export class PageNavegationScreenComponent implements OnInit {
 
   keepWatching: any
 
-  dataSeries: IDataSerie[] = []
+  dataSeries: IDataSerie[] = [];
+
 
   ngOnInit(): void {
     this.getDataUser()
   }
-  
+
   getDataUser() {
     this.service.getDetailsOfSeriesUser(1)
     .subscribe( data => {

@@ -1,0 +1,92 @@
+
+.modal {
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(15, 15, 15, 0.4);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 3s linear;
+}
+
+.modal img {
+  width: 800px;
+}
+
+.btn {
+  position: relative;
+  top: -100px;
+  font-size: 2.4rem;
+  height: 6rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  padding-left: 5rem;
+  padding-right: 3rem;
+  transition: .3s;
+  &::before {
+      position: absolute;
+  }
+}
+
+.primary {
+  color: #000;
+  background-color: #fff;
+  margin-right: 2.6rem;
+  &::before {
+      content: url('../../../assets/images/play-icon.svg');
+      left: 2rem;
+  }
+  &:hover {
+      background-color: rgba(255, 255, 255, 0.57);
+  }
+}
+
+.close-button {
+  padding:10px;
+  background-color: #141414;
+  position: relative;
+  left: 0;
+}
+
+.info-wrapper {
+  width: 800px;
+  padding: 30px;
+}
+
+.info-wrapper{
+  background-color: black;
+}
+
+.movie-info {
+  display: flex;
+  gap: 15px;
+}
+
+.movie-info span:first-child{
+  color: #46D369
+}
+
+.movie-info span {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.movie-info span:nth-child(3){
+  background-color: #EBC500;
+  color: black;
+  border-radius: 7px;
+  margin-bottom: 0;
+  padding:4px;
+}
+
+.movie-card{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
