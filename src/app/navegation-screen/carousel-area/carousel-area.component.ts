@@ -8,10 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CarouselAreaComponent implements OnInit {
 
   @Input() title!: string;
+  @Input() cards: any;
+
+  data: any
 
   constructor() { }
 
   ngOnInit(): void {
+    this.data = this.cards[0].cardImage
   }
 
 }

@@ -1,3 +1,6 @@
 <app-banner-area></app-banner-area>
 <app-carousel-area title="Populares na Netflix"></app-carousel-area>
-<app-carousel-area title="Continuar assistindo como Usuário 1"></app-carousel-area>
+<app-carousel-area title="Continuar assistindo como Usuário 1" [cards]="card" ></app-carousel-area>
+<div *ngFor="let i of card">
+    <h1 style="font-size: larger;">{{i.cardImage}}</h1>
+</div>
