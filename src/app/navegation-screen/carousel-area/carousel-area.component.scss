@@ -6,11 +6,27 @@
             margin-bottom: 3.3rem;
         }
         .area-card-film {
+
             width: 100%;
             display: flex;
             flex-wrap: nowrap;
-            overflow: hidden;
+            overflow-x: auto;
             gap: 2.5rem;
+
+            .container-card {
+                width: 100%;
+
+                .card-film {
+                    width: 250px;
+                    height: 12rem;
+                    border-radius: 0.5rem;
+                
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
+

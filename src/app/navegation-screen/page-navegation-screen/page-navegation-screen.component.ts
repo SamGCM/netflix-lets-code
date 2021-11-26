@@ -12,19 +12,23 @@ export class PageNavegationScreenComponent implements OnInit {
 
   constructor(private service: CardsService) { }
 
-  card: IDataSerie[] = []
+  cards: any
 
-  user: string = 'a'
+  popular: any
+
+  keepWatching: any
+
+  dataSeries: IDataSerie[] = []
 
   ngOnInit(): void {
     this.getDataUser()
   }
-
+  
   getDataUser() {
-    // this.service.getSeries(1)
-    //   .subscribe( data => console.log(data))
-    this.service.getSeries(1)
-      .subscribe( data => this.card.push(data))
+    this.service.getDetailsOfSeriesUser(1)
+    .subscribe( data => {
+      this.popular = data['popular']
+      this.keepWatching = data['keepWatching']
+    })
   }
-
 }

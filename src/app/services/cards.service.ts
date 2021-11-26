@@ -1,28 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { IDataSerie } from '../interfaces/dataSerie';
+import { IUserSeries } from '../interfaces/userSeries';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardsService {
-
-  dataSeriesUser: {popular: number[], keepWatching: number[]}
-
-  dataSerie: {
-    cardImage: string,
-    titleImage: string,
-    backgroundImage: string,
-    relevance: number,
-    year: number,
-    minAge: number,
-    time: number,
-    season: any,
-    description: string,
-    cast: string[],
-    genre: string[],
-    scenes: string[],
-  }
 
   constructor(private http: HttpClient,) { }
   

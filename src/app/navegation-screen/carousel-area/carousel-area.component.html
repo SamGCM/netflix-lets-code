@@ -1,8 +1,12 @@
 <section class="s-area-carousel">
     <div class="container">
         <h4>{{ title }}</h4>
-        <div class="area-card-film">
-            <app-card-carousel [cardImage]="data" ></app-card-carousel>
+        <div class="area-card-film" >
+            <!-- <app-card-carousel [cardImage]="data" ></app-card-carousel> -->
+
+            <div class='container-card' *ngFor="let item of seriesData">
+                <img class='card-film' [src]="item.cardImage">
+            </div>
         </div>
     </div>
 </section>

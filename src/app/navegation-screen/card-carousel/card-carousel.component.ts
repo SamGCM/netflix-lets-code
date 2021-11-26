@@ -7,15 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardCarouselComponent implements OnInit {
 
-  @Input() cardImage: string
+  @Input() cards: string
 
   imageForCard: string
 
   constructor() { }
 
   ngOnInit(): void {
-    this.imageForCard = this.cardImage
-    console.log(this.cardImage)
+    this.imageForCard = this.cards
   }
 
 }
