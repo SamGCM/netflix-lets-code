@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IDataSerie } from 'src/app/interfaces/dataSerie';
+import { IUserSeries } from 'src/app/interfaces/userSeries';
+import { CardsService } from 'src/app/services/cards.service';
 
 @Component({
   selector: 'app-page-navegation-screen',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNavegationScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CardsService) { }
+
+  cards: any
+
+  popular: any
+
+  keepWatching: any
+
+  dataSeries: IDataSerie[] = []
 
   ngOnInit(): void {
+    this.getDataUser()
   }
-
+  
+  getDataUser() {
+    this.service.getDetailsOfSeriesUser(1)
+    .subscribe( data => {
+      this.popular = data['popular']
+      this.keepWatching = data['keepWatching']
+    })
+  }
 }
