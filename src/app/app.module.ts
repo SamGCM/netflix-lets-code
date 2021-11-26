@@ -8,14 +8,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavegationScreenModule } from './navegation-screen/navegation-screen.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './views/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BrowseComponent } from './components/browse/browse.component';
+import { BrowseComponent } from './browse/browse.component';
 
 @NgModule({
   declarations: [
