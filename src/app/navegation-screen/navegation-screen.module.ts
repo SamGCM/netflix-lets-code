@@ -6,6 +6,7 @@ import { PageNavegationScreenComponent } from './page-navegation-screen/page-nav
 import { CarouselAreaComponent } from './carousel-area/carousel-area.component';
 import { ButtonComponent } from '../components/button/button.component';
 import { CardCarouselComponent } from './card-carousel/card-carousel.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { CardCarouselComponent } from './card-carousel/card-carousel.component';
     ButtonComponent,
     PageNavegationScreenComponent,
     CardCarouselComponent,
+    ModalComponent,
   ]
 })
 export class NavegationScreenModule { }

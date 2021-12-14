@@ -10,8 +10,9 @@
                 Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele só não esperava ter seu alvo como parceiro para prender uma bandida muito esperta.
             </p>
             <div class="area-buttons">
-                <app-button></app-button>
+                <app-button (click)="modalOpen = true"></app-button>
             </div>
         </div>
     </div>
 </section>
+<app-modal *ngIf="modalOpen"></app-modal>
